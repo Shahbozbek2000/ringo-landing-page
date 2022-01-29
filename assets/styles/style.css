@@ -1,0 +1,123 @@
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --nav_link_color: #282b22;
+  --secondary_color: #ae7b3c;
+  --raleway: "Raleway", sans-serif;
+  --lato: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: var(--lato); */
+}
+
+.navbar {
+  width: 100%;
+  /* height: 90px; */
+  font-family: var(--raleway);
+}
+
+.navbar .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 166px);
+  margin: 16px auto;
+}
+
+.navbar-brand img {
+  width: 101px;
+}
+
+ul.list-item {
+  display: flex;
+}
+.list-item li {
+  margin-left: 33px;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--nav_link_color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  font-family: var(--lato);
+}
+.social-media,
+.phone-number {
+  display: flex;
+  align-items: center;
+  margin: 0 27.5px;
+}
+
+.social-media i {
+  margin: 0 7px;
+  cursor: pointer;
+  color: var(--secondary_color);
+}
+
+.phone-number span {
+  color: #3d4a39;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.mySlides {
+  display: none;
+}
+.ringo-main-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.wrap {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 91vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) -13.19%,
+    rgba(0, 0, 0, 0.85) 94.01%
+  );
+}
+
+.first-slide {
+  position: relative;
+}
+
+.first-slide .slide-text {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.first-slide .slide-text h1 {
+  font-weight: bold;
+  font-size: 47px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.first-slide .slide-text p {
+  font-weight: 500;
+  font-family: var(--raleway);
+  font-size: 15px;
+  line-height: 150%;
+  opacity: 0.8;
+  width: 40%;
+  margin: 0 auto;
+}

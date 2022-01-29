@@ -1,14 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ringo Landing page</title>
-</head>
-<body>
-    <h2>
-        Hello World!
-    </h2>
-</body>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/responsive/middle.css" />
+    <link rel="stylesheet" href="assets/styles/responsive/xs_small.css" />
+    <link rel="stylesheet" href="assets/styles/responsive/small.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <header id="part-one">
+      <!-- navbar started -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="navbar-brand">
+            <img src="assets/icons/logo.svg" alt="logo" />
+          </div>
+          <ul class="list-item">
+            <li><a href="#napryamki" class="nav-link">Напрямки</a></li>
+            <li><a href="#kompaniyu" class="nav-link">Про компанію</a></li>
+            <li><a href="#perevagi" class="nav-link">Переваги</a></li>
+            <li><a href="#raboti" class="nav-link">Етапи роботи</a></li>
+          </ul>
+          <div class="contact">
+            <div class="social-media">
+              <span>
+                <i class="fab fa-instagram-square"></i>
+              </span>
+              <span>
+                <i class="fab fa-facebook-f"></i>
+              </span>
+            </div>
+            <div class="phone-number">
+              <span>
+                <img src="assets/icons/phone.svg" alt="phone" />
+              </span>
+              <span>+380 67661 5415</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar finished -->
+      <!-- carousel started -->
+
+      <div class="ringo-main-slider">
+        <div class="wrap"></div>
+        <div class="first-slide">
+          <img
+            class="mySlides"
+            src="assets/images/carousel/2-rasm.png"
+            style="width: 100%"
+          />
+          <div class="slide-text">
+            <h1>комплексне меблювання <br>інтреєрів</h1>
+            <p>
+              Ми створені виконувати об`єктні задачі комплексного меблювання
+              житлових та комерційних приміщень. Наш колектив націлений на
+              результат - вчасно реалізувати проект на найвищому рівні. Ми
+              забезпечуємо ваш спокій та беремо на себе вирішення будь-яких
+              задач.
+            </p>
+          </div>
+        </div>
+        <div class="second-slide">
+          <img
+            class="mySlides"
+            src="assets/images/carousel/3-rasm.png"
+            style="width: 100%"
+          />
+          
+        </div>
+        <div class="third-slide">
+          <img
+            class="mySlides"
+            src="assets/images/carousel/1-rasm.png"
+            style="width: 100%"
+          />
+          
+        </div>
+        <div class="w3-center">
+          <div class="w3-section">
+            <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">
+              ❮ Prev
+            </button>
+            <button class="w3-button w3-light-grey" onclick="plusDivs(1)">
+              Next ❯
+            </button>
+          </div>
+          <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+          <button class="w3-button demo" onclick="currentDiv(2)">2</button>
+          <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+        </div>
+      </div>
+
+      <!-- carousel finished -->
+    </header>
+  </body>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function currentDiv(n) {
+      showDivs((slideIndex = n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      console.log(x, 'img')
+      var dots = document.getElementsByClassName("demo");
+      console.log(dots)
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " w3-red";
+    }
+  </script>
 </html>
